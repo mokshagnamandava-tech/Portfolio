@@ -1,0 +1,8 @@
+/* Portfolio photo enhancement */
+body { padding: 0; }
+.hero-photo-wrap { position: relative; isolation: isolate; padding: 12px; }
+.hero-photo-glow { position: absolute; inset: 8% 4%; z-index: -1; border-radius: 2rem; background: linear-gradient(135deg, rgba(99,102,241,.42), rgba(168,85,247,.24)); filter: blur(35px); }
+.hero-photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 34%; border-radius: 1.75rem; border: 1px solid rgba(148,163,184,.28); box-shadow: 0 25px 80px rgba(0,0,0,.38); }
+.photo-caption { position: relative; display: flex; align-items: center; gap: 12px; margin: -58px 14px 0; padding: 13px 16px; border: 1px solid rgba(148,163,184,.2); border-radius: 14px; background: rgba(15,23,42,.86); backdrop-filter: blur(16px); }
+.photo-status-dot { width: 9px; height: 9px; flex: 0 0 9px; border-radius: 999px; background: #34d399; box-shadow: 0 0 14px rgba(52,211,153,.65); }
+@media (max-width: 767px) { #hero { padding-top: 1rem; } .hero-photo-wrap { max-width: 290px; } }

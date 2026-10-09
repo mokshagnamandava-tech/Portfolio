@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mandava Mokshagna | Developer Portfolio</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css" />
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              DEFAULT: '#6366f1',
+              hover: '#4f46e5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
+        Mokshagna<span class="text-indigo-500">.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+        <a id="resume-btn" href="#" target="_blank" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition-all shadow-lg shadow-indigo-500/20">Resume</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-btn" aria-label="Toggle Navigation" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 px-6 py-4 space-y-4">
+      <a href="#about" class="block text-slate-300 hover:text-indigo-400 transition-colors">About</a>
+      <a href="#skills" class="block text-slate-300 hover:text-indigo-400 transition-colors">Skills</a>
+      <a href="#projects" class="block text-slate-300 hover:text-indigo-400 transition-colors">Projects</a>
+      <a href="#contact" class="block text-slate-300 hover:text-indigo-400 transition-colors">Contact</a>
+      <a id="mobile-resume-btn" href="#" target="_blank" class="inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg">Resume</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 space-y-32 py-12">
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-8 md:pt-16 grid md:grid-cols-[1.35fr_0.85fr] items-center gap-10 md:gap-14">
+      <div class="flex flex-col items-start space-y-6 order-2 md:order-1">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold">
+        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+        Open to Opportunities
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-100">
+        Hi, I'm <span id="hero-name" class="bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent"></span>
+      </h1>
+      <p id="hero-bio" class="text-lg text-slate-400 max-w-2xl leading-relaxed"></p>
+
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="#projects" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all shadow-lg shadow-indigo-500/25">View My Work</a>
+        <a href="#contact" class="px-6 py-3 border border-slate-700 hover:border-slate-500 bg-slate-900 text-slate-200 font-medium rounded-xl transition-all">Contact Me</a>
+      </div>
+
+      <div class="flex items-center space-x-5 pt-4 text-slate-400">
+        <a id="link-github" href="#" target="_blank" aria-label="GitHub Profile" class="hover:text-indigo-400 transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+        <a id="link-linkedin" href="#" target="_blank" aria-label="LinkedIn Profile" class="hover:text-indigo-400 transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+        <a id="link-email" href="#" aria-label="Email" class="hover:text-indigo-400 transition-colors"><i data-lucide="mail" class="w-6 h-6"></i></a>
+      </div>
+      </div>
+      <div class="hero-photo-wrap order-1 md:order-2 mx-auto w-full max-w-sm">
+        <div class="hero-photo-glow"></div>
+        <img src="assets/mokshagna-profile.jpg" alt="Portrait of Mandava Mokshagna" class="hero-photo" />
+        <div class="photo-caption"><span class="photo-status-dot"></span><div><p class="font-semibold text-slate-100">Mandava Mokshagna</p><p class="text-xs text-slate-400">Developer · Student · Creator</p></div></div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="space-y-8">
+      <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-3">
+        <i data-lucide="user" class="text-indigo-400"></i> About Me
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2 space-y-4 text-slate-300 leading-relaxed bg-slate-900/40 p-6 rounded-2xl border border-slate-800">
+          <p id="about-text-1"></p>
+          <p id="about-text-2"></p>
+        </div>
+        <div id="stats-container" class="grid grid-cols-1 gap-4"></div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="space-y-8">
+      <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-3">
+        <i data-lucide="code" class="text-indigo-400"></i> Skills & Expertise
+      </h2>
+      <div id="skills-container" class="grid sm:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="space-y-8">
+      <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-3">
+        <i data-lucide="folder-git-2" class="text-indigo-400"></i> Featured Projects
+      </h2>
+      <div id="projects-container" class="grid md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="space-y-8">
+      <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-3">
+        <i data-lucide="mail" class="text-indigo-400"></i> Get In Touch
+      </h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <form id="contact-form" class="space-y-4 bg-slate-900/40 p-6 rounded-2xl border border-slate-800">
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-1">Name</label>
+            <input type="text" id="form-name" required class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-1">Email</label>
+            <input type="email" id="form-email" required class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors" placeholder="your.email@example.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-1">Message</label>
+            <textarea id="form-message" rows="4" required class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-all shadow-md shadow-indigo-500/20">Send Message</button>
+          <p id="form-status" class="text-xs text-center text-slate-400 hidden"></p>
+        </form>
+
+        <div class="space-y-6 flex flex-col justify-center bg-slate-900/20 p-6 rounded-2xl border border-slate-800/50">
+          <div class="flex items-start space-x-4">
+            <i data-lucide="mail" class="w-6 h-6 text-indigo-400 mt-1"></i>
+            <div>
+              <h4 class="text-sm font-semibold text-slate-200">Email</h4>
+              <a id="info-email" href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm"></a>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <i data-lucide="map-pin" class="w-6 h-6 text-indigo-400 mt-1"></i>
+            <div>
+              <h4 class="text-sm font-semibold text-slate-200">Location</h4>
+              <p id="info-location" class="text-slate-400 text-sm"></p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-indigo-400 mt-1"></i>
+            <div>
+              <h4 class="text-sm font-semibold text-slate-200">Institution</h4>
+              <p id="info-college" class="text-slate-400 text-sm"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 py-8 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-slate-500">&copy; <span id="year"></span> Mandava Mokshagna. Built with HTML, CSS & JS.</p>
+      <a href="#hero" class="text-xs text-slate-400 hover:text-indigo-400 flex items-center gap-1 transition-colors">
+        Back to top <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
